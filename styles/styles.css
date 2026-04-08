@@ -1,4 +1,11 @@
-		body {
+	html, body {
+	    width: 100%;
+	    overflow-x: hidden; /* Corta cualquier cosa que intente salirse por la derecha */
+	    margin: 0;
+	    padding: 0;
+	    -webkit-text-size-adjust: 100%; /* Evita que el navegador "infle" el texto al rotar */
+	}
+	body {
 			margin: 0;
 			overflow: hidden;
 			background-color: #222;
@@ -19,6 +26,12 @@
 			text-align: center;
 			margin-top: 20px;
 			gap: 20px;
+			width: 100%;
+		    box-sizing: border-box; /* Asegura que el padding no sume ancho extra */
+		    display: flex;
+		    flex-direction: column;
+		    align-items: center;    /* Fuerza a que el contenido esté centrado */
+		    text-align: center;     /* Alinea el texto al centro */
 		}
 
 		#politikaos {
