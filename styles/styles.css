@@ -1,92 +1,95 @@
-	html, body {
-	    width: 100%;
-	    overflow-x: hidden; /* Corta cualquier cosa que intente salirse por la derecha */
-	    margin: 0;
-	    padding: 0;
-	    -webkit-text-size-adjust: 100%; /* Evita que el navegador "infle" el texto al rotar */
-	}
+	html,
 	body {
-			margin: 0;
-			overflow: hidden;
-			background-color: #222;
-			display: flex;
-			justify-content: center;
-			font-family: 'Roboto Mono', monospace; /* <--- CAMBIO */
+		width: 100%;
+		overflow-x: hidden;
+		/* Corta cualquier cosa que intente salirse por la derecha */
+		margin: 0;
+		padding: 0;
+		-webkit-text-size-adjust: 100%;
+		/* Evita que el navegador "infle" el texto al rotar */
+	}
+
+	body {
+		margin: 0;
+		overflow: hidden;
+		background-color: #222;
+		display: flex;
+		justify-content: center;
+		font-family: 'Roboto Mono', monospace;
+		/* <--- CAMBIO */
+	}
+
+	canvas {
+		display: block;
+	}
+
+	#info {
+		position: absolute;
+		color: white;
+		display: block;
+		justify-content: center;
+		text-align: center;
+		margin-top: 20px;
+		width: 100%;
+		box-sizing: border-box;
+		/* Asegura que el padding no sume ancho extra */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* Fuerza a que el contenido esté centrado */
+		text-align: center;
+		/* Alinea el texto al centro */
+	}
+
+	#politikaos {
+		color: rgb(247, 247, 139);
+	}
+
+	a {
+		color: yellow;
+	}
+
+
+	#izquierdo {
+		position: absolute;
+		bottom: 20px;
+		left: 10px;
+		color: white;
+		font-size: 14px;
+		z-index: 10;
+		pointer-events: none;
+		opacity: 0.7;
+	}
+
+	#derecho {
+		position: absolute;
+		bottom: 20px;
+		right: 10px;
+		color: white;
+		font-size: 14px;
+		z-index: 10;
+		opacity: 0.7;
+		cursor: pointer;
+		user-select: none;
+	}
+
+	@media (max-width: 768px) {
+		#info p {
+			font-size: 20px;
+			/* Título más grande en móvil */
 		}
 
-		canvas {
-			display: block;
+		#info a {
+			font-size: 16px;
+			/* Links mucho más grandes en móvil para tocar fácil */
+			/* Más separación entre links para no fallar el clic */
 		}
 
-		#info {
-			position: absolute;
-			color: white;
-			display: block;
-			justify-content: center;
-			text-align: center;
-			margin-top: 20px;
-			width: 100%;
-		    box-sizing: border-box; /* Asegura que el padding no sume ancho extra */
-		    display: flex;
-		    flex-direction: column;
-		    align-items: center;    /* Fuerza a que el contenido esté centrado */
-		    text-align: center;     /* Alinea el texto al centro */
+		#izquierdo,
+		#derecho {
+			font-size: 8px;
+			/* Links mucho más grandes en móvil para tocar fácil */
+			/* Más separación entre links para no fallar el clic */
 		}
 
-		#politikaos {
-			color: rgb(247, 247, 139);
-		}
-
-		a {
-			color: yellow;
-		}
-
-		
-		#izquierdo {
-			position: absolute;
-			bottom: 20px;
-			left: 10px;
-			color: white;
-			font-size: 14px;
-			z-index: 10;
-			pointer-events: none;
-			opacity: 0.7;
-		}
-
-		#derecho{
-			position: absolute;
-			bottom: 20px;
-			right: 10px;
-			color: white;
-			font-size: 14px;
-			z-index: 10;
-			opacity: 0.7;
-			cursor: pointer;
-			user-select: none;
-		}
-
-		@media (max-width: 768px) {
-			#info p {
-				font-size: 20px;
-				/* Título más grande en móvil */
-			}
-
-			#info a {
-				font-size: 16px;
-				/* Links mucho más grandes en móvil para tocar fácil */
-				margin: 10px 0;
-				/* Más separación entre links para no fallar el clic */
-			}
-
-			#izquierdo, #derecho {
-				font-size: 12px;
-				/* Links mucho más grandes en móvil para tocar fácil */
-				margin: 5px 0;
-				/* Más separación entre links para no fallar el clic */
-			}
-
-			#info {
-				/* En móvil aumentamos el "gap" para alejarlo visualmente del centro */
-				gap: 40px;
-			}
-		}
+	}
