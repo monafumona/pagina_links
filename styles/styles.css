@@ -87,7 +87,7 @@
 
 		#izquierdo,
 		#derecho {
-			font-size: 8px;
+			font-size: 11px;
 			/* Links mucho más grandes en móvil para tocar fácil */
 			/* Más separación entre links para no fallar el clic */
 		}
