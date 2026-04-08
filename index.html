@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Three.js Fix - Fondo y Figura</title>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+	<div id="info">
+		<p>monafumona's links - </p>
+		<a href="https://x.com/juangimeenez_" target="_blank" rel="noopener">Twitter</a>
+		<br>
+		<a href="https://www.instagram.com/juangimeenez_/" target="_blank" rel="noopener">Instagram</a>
+		<br>
+		<a href="https://github.com/monafumona" target="_blank" rel="noopener">Github</a>
+		<br>
+		<br>
+		<a id="politikaos" href="https://politikaos.es" target="_blank" rel="noopener">Politikaos</a>
+		<br>
+		<!--
+		<a id="politikaos" href="" target="_blank" rel="noopener">Blog personal</a>
+		<br>
+		-->
+	</div>
+
+	<footer>
+		<div id="izquierdo">☢2026 todos_mis_derechos_reservados</div>
+		<div id="derecho" onclick="reproducirSonido()">NO pulses aqui</div>
+	</footer>
+	<script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.163.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.163.0/examples/jsm/"
+            }
+        }
+    </script>
+
+	<script type="module" src="js/model.js"></script>
+	<script src="js/sonido.js"></script>
+</body>
+
+</html>

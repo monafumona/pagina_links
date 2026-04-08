@@ -1,0 +1,74 @@
+		body {
+			margin: 0;
+			overflow: hidden;
+			background-color: #222;
+			display: flex;
+			justify-content: center;
+			font-family: 'Roboto Mono', monospace; /* <--- CAMBIO */
+		}
+
+		canvas {
+			display: block;
+		}
+
+		#info {
+			position: absolute;
+			color: white;
+			display: block;
+			justify-content: center;
+			text-align: center;
+			margin-top: 20px;
+			gap: 20px;
+		}
+
+		#politikaos {
+			color: rgb(247, 247, 139);
+		}
+
+		a {
+			color: yellow;
+		}
+
+		
+		#izquierdo {
+			position: absolute;
+			bottom: 20px;
+			left: 10px;
+			color: white;
+			font-size: 14px;
+			z-index: 10;
+			pointer-events: none;
+			opacity: 0.7;
+		}
+
+		#derecho{
+			position: absolute;
+			bottom: 20px;
+			right: 10px;
+			color: white;
+			font-size: 14px;
+			z-index: 10;
+			opacity: 0.7;
+			cursor: pointer;
+			user-select: none;
+		}
+
+		@media (max-width: 768px) {
+			#info p {
+				font-size: 20px;
+				/* Título más grande en móvil */
+			}
+
+			#info a,
+			#pie {
+				font-size: 16px;
+				/* Links mucho más grandes en móvil para tocar fácil */
+				margin: 10px 0;
+				/* Más separación entre links para no fallar el clic */
+			}
+
+			#info {
+				/* En móvil aumentamos el "gap" para alejarlo visualmente del centro */
+				gap: 40px;
+			}
+		}
