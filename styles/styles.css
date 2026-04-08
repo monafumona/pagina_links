@@ -59,11 +59,17 @@
 				/* Título más grande en móvil */
 			}
 
-			#info a,
-			#pie {
+			#info a {
 				font-size: 16px;
 				/* Links mucho más grandes en móvil para tocar fácil */
 				margin: 10px 0;
+				/* Más separación entre links para no fallar el clic */
+			}
+
+			#izquierdo, #derecho {
+				font-size: 12px;
+				/* Links mucho más grandes en móvil para tocar fácil */
+				margin: 5px 0;
 				/* Más separación entre links para no fallar el clic */
 			}
 
