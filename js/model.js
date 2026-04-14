@@ -36,8 +36,9 @@ function init() {
     // 2. SUSTITUIR EL BLOQUE DE "FIGURA 3D" POR EL SIGUIENTE:
     const gltfLoader = new GLTFLoader(); // <--- CAMBIO
 
+    const rutaElegida = itemRandom("modelo");
     // Reemplaza 'tu_modelo.glb' por el nombre de tu archivo exacto
-    gltfLoader.load(itemRandom("modelo"), function (gltf) {
+    gltfLoader.load(rutaElegida, function (gltf) {
         const model = gltf.scene;
 
         model.traverse(function (child) {
@@ -54,7 +55,12 @@ function init() {
                 child.material.needsUpdate = true;
             }
         });
-        model.position.y = -0.4;
+        if(rutaElegida==='resources/huevo.glb'){
+            model.scale.set(0.5,0.5,0.5);
+        }else{
+            model.scale.set(1,1,1);
+            model.position.y = -0.4;
+        }
         scene.add(model);
         mesh = model;
     });
