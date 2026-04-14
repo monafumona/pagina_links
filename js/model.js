@@ -12,7 +12,7 @@ function init() {
     scene.background = new THREE.Color(0x333333);
 
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.set(0, 0, 5);
+    camera.position.set(0, 0, 1);
 
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -24,7 +24,7 @@ function init() {
     controls = new OrbitControls(camera, renderer.domElement);
 
     const loader = new THREE.TextureLoader();
-    loader.load('img/Street View 360.jpg',
+    loader.load(itemRandom("fondo"),
         function (texture) {
             texture.mapping = THREE.EquirectangularReflectionMapping;
             texture.colorSpace = THREE.SRGBColorSpace
@@ -37,7 +37,7 @@ function init() {
     const gltfLoader = new GLTFLoader(); // <--- CAMBIO
 
     // Reemplaza 'tu_modelo.glb' por el nombre de tu archivo exacto
-    gltfLoader.load('./resources/dragon_skull_2.glb', function (gltf) {
+    gltfLoader.load(itemRandom("modelo"), function (gltf) {
         const model = gltf.scene;
 
         model.traverse(function (child) {
@@ -54,7 +54,7 @@ function init() {
                 child.material.needsUpdate = true;
             }
         });
-
+        model.position.y = -0.4;
         scene.add(model);
         mesh = model;
     });
