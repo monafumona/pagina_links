@@ -55,8 +55,9 @@ function init() {
                 child.material.needsUpdate = true;
             }
         });
-        if(rutaElegida==='resources/huevo.glb'){
-            model.scale.set(0.5,0.5,0.5);
+        
+        if(rutaElegida==='resources/leon.glb'){
+            model.scale.set(0.002,0.002,0.002);
         }else{
             model.scale.set(1,1,1);
             model.position.y = -0.4;
