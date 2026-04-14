@@ -15,9 +15,8 @@ function itemRandom(item) {
     if (item === "modelo") {
         const imagenes = [
             'resources/dino2.glb',
-            
             'resources/dragon.glb',
-            'resources/huevo.glb'
+            'resources/leon.glb'
         ];
 
         const elegido = imagenes[Math.floor(Math.random() * imagenes.length)];
